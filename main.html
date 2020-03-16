@@ -21,11 +21,115 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Single+Day&display=swap" rel="stylesheet">
+    <title>CSS</title>
+    <style>
+        * {
+            font-family: 'Single Day', cursive;
+        }
 
+        .card {
+            width: 300px;
+            margin: 10px auto 10px auto;
+        }
+
+        div {
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Homework1</h1>
-</body>
 
-</html>
+    <div class="card" style="width: 42rem;">
+        <img class="card-img-top" src= "C:\Users\skys6\Desktop\Spartacodingclub\homework\homework1_skys6303\meta.jpg" width="600px" height="400px" alt="">
+        <div class="explain-area">
+            <div class="info-wrap">
+                <p class="sort"></p>
+                <span>
+                    <h3><B>비맥스 메타정</B></h3><span>가격: 50,000원 / Box</span>
+                </span>
+                <div>
+                    <h5><B>제품 설명</B></h5>
+                    <span>
+                        <div style="text-align:left">이 영양제의 효능으로는 비타민 D, B1, B2, B6를 보급해줍니다. 또한 육체피로, 임신, 수유기, 병중,
+                            병후(회복)에 효능이 있습니다. 또한 신경통, 근육통,
+                            관절통(요통,
+                            어꺠결림 등),
+                            구각염(입꼬리염), 구순염(입술염), 구내염(입안염), 설염(혀염), 습진, 피부염, 각기, 눈의 피로, 뼈,이의 발육불량, 구루병 예방에 도움이 됩니다.</div>
+                    </span>
+                </div>
+                <p></p>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">주문자 이름</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <div class="input-group-append">
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">주소</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <div class="input-group-append">
+                    </div>
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">전화번호</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <div class="input-group-append">
+                    </div>
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">수량 선택</span>
+                <div class="input-group-append">
+                    <select name="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+                        <option value="dropdown-item" href="#">-------</option>
+                        <option value="dropdown-item" href="#">1개 구매</option>
+                        <option value="dropdown-item" href="#">2개 구매</option>
+                        <option value="dropdown-item" href="#">3개 구매</option>
+                        <option value="dropdown-item" href="#">4개 구매</option>
+                        <option value="dropdown-item" href="#">5개 구매</option>
+                        <option value="dropdown-item" href="#">6개 구매</option>
+                        <option value="dropdown-item" href="#">7개 구매</option>
+                        <option value="dropdown-item" href="#">8개 구매</option>
+                        <option value="dropdown-item" href="#">9개 구매</option>
+                        <option value="dropdown-item" href="#">10개 구매</option>
+                        <option value="dropdown-item" href="#">대량 구매는 전화 문의주세요.</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">수량 선택</span>
+                <div class="input-group-append">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+                        -------
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">1개 구매</a>
+                        <a class="dropdown-item" href="#">2개 구매</a>
+                        <a class="dropdown-item" href="#">3개 구매</a>
+                        <a class="dropdown-item" href="#">4개 구매</a>
+                        <a class="dropdown-item" href="#">5개 구매</a>
+                        <a class="dropdown-item" href="#">6개 구매</a>
+                        <a class="dropdown-item" href="#">7개 구매</a>
+                        <a class="dropdown-item" href="#">8개 구매</a>
+                        <a class="dropdown-item" href="#">9개 구매</a>
+                        <a class="dropdown-item" href="#">10개 구매</a>
+                        <a class="dropdown-item" href="#">대량 구매는 전화 문의주세요.</a>
+                    </div>
+                </div>
+            </div>
+            </select>
+            <button type="submit" class="btn btn-primary" onclick="location.href= 'http://naver.com'">주문하기</button>
+        </div>
+    </div>
+</body>
