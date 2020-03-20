@@ -37,12 +37,47 @@
             text-align: center;
         }
     </style>
+    <script type="text/javascript">
+        function isCellPhone(p) {
+            var regExp = /^(01[016789]{1}|02|0[3-9]{1}[0-9]{1})[-][0-9]{3,4}[-][0-9]{4}$/;
+            return regExp.test(p);
+        }
+        function order() {
+            let name = $('#order_name').val();
+            let address = $('#order_adress').val();
+            let phone = $('#order_phone').val();
+            let count = $('#order_count').val();
+
+            if (name == '') {
+                alert('이름을 입력해주세요')
+                $('#order_name').focus()
+                return
+            } else if (address == '') {
+                alert('주소를 입력해주세요')
+                $('#order_adress').focus()
+                return
+            } else if (phone == '') {
+                alert('휴대폰번호를 입력해주세요')
+                $('#order_phone').focus()
+                return
+            } else if (!isCellPhone(phone)) {
+                alert('휴대폰번호 입력 형식이 틀립니다. \n 010-0000-0000으로 입력해주세요')
+                return
+            } else if (count == 0) {
+                alert('수량을 입력해주세요')
+                $('#order_count').focus()
+                return
+            }
+            alert("주문완료!")
+        }
+    </script>
 </head>
 
 <body>
 
     <div class="card" style="width: 42rem;">
-        <img class="card-img-top" src= "C:\Users\skys6\Desktop\Spartacodingclub\homework\homework1_skys6303\meta.jpg" width="600px" height="400px" alt="">
+        <img class="card-img-top" src="C:\Users\skys6\Desktop\Spartacodingclub\homework\homework1_skys6303\meta.jpg"
+            width="600px" height="400px" alt="">
         <div class="explain-area">
             <div class="info-wrap">
                 <p class="sort"></p>
@@ -64,7 +99,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">주문자 이름</span>
                     </div>
-                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <input id="order_name" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                     <div class="input-group-append">
                     </div>
                 </div>
@@ -72,7 +107,8 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">주소</span>
                     </div>
-                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <input id="order_adress" type="text" class="form-control"
+                        aria-label="Amount (to the nearest dollar)">
                     <div class="input-group-append">
                     </div>
                 </div>
@@ -80,7 +116,8 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">전화번호</span>
                     </div>
-                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    <input id="order_phone" type="text" class="form-control"
+                        aria-label="Amount (to the nearest dollar)">
                     <div class="input-group-append">
                     </div>
                 </div>
@@ -88,7 +125,7 @@
             <div class="input-group mb-3">
                 <span class="input-group-text">수량 선택</span>
                 <div class="input-group-append">
-                    <select name="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+                    <select id="order_count" name="dropdown-menu" aria-labelledby="dropdownMenuButton">
                         <option value="dropdown-item" href="#">-------</option>
                         <option value="dropdown-item" href="#">1개 구매</option>
                         <option value="dropdown-item" href="#">2개 구매</option>
@@ -106,30 +143,8 @@
             </div>
         </div>
         <div>
-            <div class="input-group mb-3">
-                <span class="input-group-text">수량 선택</span>
-                <div class="input-group-append">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
-                        -------
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">1개 구매</a>
-                        <a class="dropdown-item" href="#">2개 구매</a>
-                        <a class="dropdown-item" href="#">3개 구매</a>
-                        <a class="dropdown-item" href="#">4개 구매</a>
-                        <a class="dropdown-item" href="#">5개 구매</a>
-                        <a class="dropdown-item" href="#">6개 구매</a>
-                        <a class="dropdown-item" href="#">7개 구매</a>
-                        <a class="dropdown-item" href="#">8개 구매</a>
-                        <a class="dropdown-item" href="#">9개 구매</a>
-                        <a class="dropdown-item" href="#">10개 구매</a>
-                        <a class="dropdown-item" href="#">대량 구매는 전화 문의주세요.</a>
-                    </div>
-                </div>
-            </div>
             </select>
-            <button type="submit" class="btn btn-primary" onclick="location.href= 'http://naver.com'">주문하기</button>
+            <button onclick="order()" type="button" class="btn btn-primary">주문하기</button>
         </div>
     </div>
 </body>
